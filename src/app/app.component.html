@@ -1,0 +1,64 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mh-header">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <div class="brand-icon">G</div>
+            <div class="brand-text">
+                <span class="brand-name">Gunalan</span>
+                <span class="brand-role">Frontend Developer</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto position-relative">
+                <li class="nav-indicator"></li>
+                <li class="nav-item"><a class="nav-link" [class.active]="currentSection === 'home'" href="#home" (click)="scrollToSection('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" [class.active]="currentSection === 'about'" href="#about" (click)="scrollToSection('about')">About</a></li>
+                <li class="nav-item"><a class="nav-link" [class.active]="currentSection === 'skills'" href="#skills" (click)="scrollToSection('skills')">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" [class.active]="currentSection === 'experience'" href="#experience" (click)="scrollToSection('experience')">Experiences</a></li>
+                <li class="nav-item"><a class="nav-link" [class.active]="currentSection === 'contact'" href="#contact" (click)="scrollToSection('contact')">Contact</a></li>
+            </ul>
+            <a href="#" (click)="downloadCV($event)" class="btn btn-dark-navy"><i class="fa fa-download me-2"></i>Download Resume</a>
+        </div>
+    </div>
+</nav>
+
+<app-hero></app-hero>
+<app-about></app-about>
+<app-skills></app-skills>
+<app-experience></app-experience>
+
+<!-- Footer / Contact -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-contact">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2>Let's build something amazing together!</h2>
+                    <p>I'm currently open to new opportunities.</p>
+                    <a href="mailto:gunalanit7&#64;gmail.com" class="btn-primary-glow">
+                        Contact Me <i class="fa fa-paper-plane"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <ul class="contact-info-list">
+                        <li><i class="fa fa-envelope"></i> gunalanit7&#64;gmail.com</li>
+                        <li><i class="fa fa-phone"></i> +91 9751132561</li>
+                        <li><i class="fa fa-map-marker-alt"></i> Chennai, India</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gunalan7" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<router-outlet></router-outlet>
