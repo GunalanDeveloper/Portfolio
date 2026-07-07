@@ -37,7 +37,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/portfolio/browser
+          path: dist/portfolio-app
 
   deploy:
     needs: build
