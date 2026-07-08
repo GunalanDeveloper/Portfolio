@@ -46,6 +46,14 @@ export class AppComponent implements OnInit {
       }
     });
 
+    // Check if user has scrolled to the bottom of the page
+    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2) {
+      const lastSection = sections[sections.length - 1];
+      if (lastSection) {
+        current = lastSection.getAttribute('id') || current;
+      }
+    }
+
     this.currentSection = current;
     this.updateIndicator();
   }
